@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct ItemListState: ViewState {
-    var items: [Item]
+    var items: [Item] = []
 
-    static var initial: ItemListState { ItemListState(items: []) }
+    static var initial: ItemListState { ItemListState() }
 }
 
 enum ItemListAction {
@@ -23,10 +23,4 @@ struct ItemListView: View {
         .onAppear { delay(.seconds(1)) { self.viewModel.handle(action: .load) } }
     }
 
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemListView()
-    }
 }
