@@ -12,12 +12,13 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         injectMe {
             component { serviceComponent }
             component { useCaseComponent }
+            factory { self.navigator } // In this case we return the SceneDelegate Navigator so its a singleton
         }
 
         if let windowScene = scene as? UIWindowScene {
             window = navigator.setup(window: UIWindow(windowScene: windowScene))
             window?.makeKeyAndVisible()
-            navigator.handle(navigation: .push(.first()))
+            navigator.handle(navigation: .push(.list()))
         }
     }
 

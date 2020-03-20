@@ -7,7 +7,7 @@ final class ItemListModuleBuilder: ModuleBuilder {
 
     override func component() -> Component? {
         Component {
-            factory { ItemListViewModel(fetchItemsUseCase: $0.resolve()) }
+            factory { ItemListViewModel(navigator: $0.resolve(), fetchItemsUseCase: $0.resolve()) }
         }
     }
 
@@ -18,7 +18,7 @@ final class ItemListModuleBuilder: ModuleBuilder {
 }
 
 extension Screen {
-    static func first() -> Self {
+    static func list() -> Self {
         .init() { ItemListModuleBuilder().build() }
     }
 }

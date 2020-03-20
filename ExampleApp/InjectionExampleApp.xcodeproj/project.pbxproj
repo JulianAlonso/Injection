@@ -16,12 +16,12 @@
 		5AABED7BE5FD557B823E71CC /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7058D34208616A5D3DB6A7 /* ItemService.swift */; };
 		62C9F90C271F7F5CB1A8434D /* ItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D992470F1439789E85626B8 /* ItemUseCase.swift */; };
 		7493A6FBA9744DA74DD9804B /* ItemListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2FA9ED2B5E514173DE351 /* ItemListModuleBuilder.swift */; };
-		894EAC1D60604998BE618C4F /* AddItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB958B326DA8F26C78FAD0F /* AddItemUseCase.swift */; };
 		8CD10677B325A034898BB21C /* AppModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271C10CCB0D151D3B6D3BE2 /* AppModuleBuilder.swift */; };
 		8DE307F8242558FF003575BB /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE307F7242558FF003575BB /* Delay.swift */; };
 		8DE307FE24255C8B003575BB /* ItemDetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE307FD24255C8B003575BB /* ItemDetailModuleBuilder.swift */; };
 		8DE3080024255CD4003575BB /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE307FF24255CD4003575BB /* ItemDetailView.swift */; };
 		8DE3080224255CDD003575BB /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3080124255CDD003575BB /* ItemDetailViewModel.swift */; };
+		8DE3080624256158003575BB /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE3080524256158003575BB /* TextStyle.swift */; };
 		98076013EF57C0BBA17F169B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7E69198B512340106AD87A /* Nimble.framework */; };
 		9FAA57B4E736B02BC14F634D /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724DE31B577272DFEF0FA9AE /* empty.swift */; };
 		AB1AA1A57E19BE9BDED7B780 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002D484DA9A1DD4A1B98F94 /* Item.swift */; };
@@ -73,7 +73,6 @@
 		2B21E63A92B9A42850EC9B41 /* FetchItemsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchItemsUseCase.swift; sourceTree = "<group>"; };
 		3B789A9CC402A99BD13C9220 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		3D992470F1439789E85626B8 /* ItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUseCase.swift; sourceTree = "<group>"; };
-		4CB958B326DA8F26C78FAD0F /* AddItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemUseCase.swift; sourceTree = "<group>"; };
 		5746EDCF1F9185E345649394 /* Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Tests.plist; sourceTree = "<group>"; };
 		5AA65C51A67F4FEB9B9EBEA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63A090D262AB4053CFB5DFD7 /* FakeItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeItemService.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		8DE307FD24255C8B003575BB /* ItemDetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailModuleBuilder.swift; sourceTree = "<group>"; };
 		8DE307FF24255CD4003575BB /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		8DE3080124255CDD003575BB /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
+		8DE3080524256158003575BB /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		94AB62C597E5E8CFBCD37F26 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7E69198B512340106AD87A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		A63DCDD0FF1B695672ED7C3D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +205,7 @@
 		86E45D9867999617E8B77094 /* DisplayKit */ = {
 			isa = PBXGroup;
 			children = (
+				8DE3080424256138003575BB /* Styles */,
 				8DE3080324255D26003575BB /* ItemViews */,
 			);
 			path = DisplayKit;
@@ -243,6 +244,14 @@
 				0D9EE5AE1F624A3899A255A9 /* ItemView.swift */,
 			);
 			path = ItemViews;
+			sourceTree = "<group>";
+		};
+		8DE3080424256138003575BB /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				8DE3080524256158003575BB /* TextStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		93D209A6A78F79A82C3DAED0 /* Products */ = {
@@ -306,7 +315,6 @@
 		E95511D7507C911F375EF40C /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				4CB958B326DA8F26C78FAD0F /* AddItemUseCase.swift */,
 				2B21E63A92B9A42850EC9B41 /* FetchItemsUseCase.swift */,
 				3D992470F1439789E85626B8 /* ItemUseCase.swift */,
 			);
@@ -504,6 +512,7 @@
 				55EAF9E56021B880F1A2185C /* AppDelegate.swift in Sources */,
 				8CD10677B325A034898BB21C /* AppModuleBuilder.swift in Sources */,
 				BC55AAF7FAF2BB8E498C28DF /* CoreComponents.swift in Sources */,
+				8DE3080624256158003575BB /* TextStyle.swift in Sources */,
 				1C12AF465CA29FC7AFD4F310 /* ItemView.swift in Sources */,
 				AB1AA1A57E19BE9BDED7B780 /* Item.swift in Sources */,
 				1E79734C15D1FEAF32729CE2 /* ViewModel.swift in Sources */,
@@ -517,7 +526,6 @@
 				070D3F3D6224CA179569CA2E /* FakeItemService.swift in Sources */,
 				8DE307F8242558FF003575BB /* Delay.swift in Sources */,
 				5AABED7BE5FD557B823E71CC /* ItemService.swift in Sources */,
-				894EAC1D60604998BE618C4F /* AddItemUseCase.swift in Sources */,
 				F7A118070320C7408DD07716 /* FetchItemsUseCase.swift in Sources */,
 				62C9F90C271F7F5CB1A8434D /* ItemUseCase.swift in Sources */,
 				8DE307FE24255C8B003575BB /* ItemDetailModuleBuilder.swift in Sources */,
