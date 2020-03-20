@@ -1,0 +1,24 @@
+os: osx
+language: swift
+osx_image: xcode11.3
+xcode_workspace: Injection.xcworkspace
+cache:
+  bundler: true
+  directories:
+    - Carthage
+addons:
+  homebrew:
+    packages:
+      - swiftlint
+      - swiftformat
+      - carthage
+before_install:
+- bash <(curl -Ls https://install.tuist.io)
+branches:
+  only:
+  - master
+jobs:
+  include:
+    - stage: "✅ Test suite"
+      name: Test suite
+      script: bundle exec fastlane test

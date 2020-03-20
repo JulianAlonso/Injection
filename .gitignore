@@ -1,0 +1,32 @@
+#Mac trash
+.DS_Store
+
+## Travis things
+.bundle/
+vendor/
+
+#Carthage
+Carthage
+Cartfile.resolved
+
+# Xcode things
+**xcuserdata
+
+#Tuist derived things
+Derived/
+
+#Old testing version
+old/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# own private notes
+.Notes.md

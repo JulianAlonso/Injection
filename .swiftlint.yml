@@ -1,0 +1,77 @@
+disabled_rules:
+  - identifier_name
+  - file_header
+  - file_name
+  - lower_acl_than_parent
+  - unavailable_function
+  - conditional_returns_on_newline
+  - explicit_type_interface
+  - explicit_top_level_acl
+  - missing_docs
+  - modifier_order
+  - switch_case_on_newline
+  - pattern_matching_keywords
+  - prohibited_interface_builder
+  - multiline_function_chains
+  - multiline_arguments
+  - nimble_operator
+  - let_var_whitespace
+  - function_default_parameter_at_end
+  - multiline_parameters
+  - attributes
+  - object_literal
+opt_in_rules:
+  - anyobject_protocol
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - contains_over_first_not_nil
+  - convenience_type
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - explicit_init
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - first_where
+  - identical_operands
+  - implicit_return
+  - joined_default_parameter
+  - literal_expression_end_indentation
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  - unneeded_parentheses_in_closure_argument
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - yoda_condition
+line_length: 170
+type_body_length:
+  warning: 300
+  error: 400
+cyclomatic_complexity:
+  warning: 12
+  error: 15
+function_parameter_count:
+  warning: 6
+  error: 8
+nesting:
+  type_level: 3
+excluded:
+  - Carthage
+included: # paths to include during linting. `--path` is ignored if present.
+  - Injection/Sources

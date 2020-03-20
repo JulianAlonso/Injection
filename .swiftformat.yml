@@ -1,0 +1,86 @@
+# file options
+
+--symlinks ignore
+--swiftversion 5
+
+# format options
+
+--allman false
+--indent 4
+--exponentcase lowercase
+--hexliteralcase uppercase
+--linebreaks lf
+--binarygrouping 4,8
+--hexgrouping 4,8
+--decimalgrouping 3,6
+--octalgrouping 4,8
+--exponentgrouping disabled
+--fractiongrouping disabled
+--header ""
+--nospaceoperators
+--self init-only
+--elseposition same-line
+--semicolons inline
+--comments indent
+--operatorfunc spaced
+--commas inline
+--trimwhitespace always
+--stripunusedargs closure-only
+--empty void
+--wraparguments preserve
+--closingparen balanced
+--wrapcollections preserve
+--ifdef indent
+--indentcase false
+--patternlet inline
+
+# rules
+
+--enable consecutiveBlankLines
+--enable consecutiveSpaces
+--enable duplicateImports
+--enable elseOnSameLine
+--enable emptyBraces
+--enable linebreakAtEndOfFile
+--enable linebreaks
+--enable redundantBackticks
+--enable redundantGet
+--enable redundantLet
+--enable redundantNilInit
+--disable redundantParens
+--enable redundantPattern
+--enable redundantRawValues
+--enable redundantReturn
+--enable redundantVoidReturnType
+--enable redundantInit
+--enable semicolons
+--enable sortedImports
+--enable spaceAroundBraces
+--enable spaceAroundBrackets
+--enable spaceAroundComments
+--enable spaceAroundGenerics
+--enable spaceAroundOperators
+--enable spaceAroundParens
+--enable spaceInsideBraces
+--enable spaceInsideBrackets
+--enable spaceInsideComments
+--enable spaceInsideGenerics
+--enable spaceInsideParens
+--enable specifiers
+--enable strongOutlets
+--enable trailingCommas
+--enable trailingSpace
+--enable todos
+--enable unusedArguments
+--enable void
+--enable wrapArguments
+
+--disable hoistPatternLet
+--enable redundantSelf
+--disable blankLinesAtStartOfScope,blankLinesAtEndOfScope
+--enable blankLinesBetweenScopes,blankLinesAroundMark
+
+# --experimental enabled
+
+# exclude
+--exclude Carthage/**
