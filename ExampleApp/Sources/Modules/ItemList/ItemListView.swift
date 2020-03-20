@@ -20,13 +20,7 @@ struct ItemListView: View {
         List(viewModel.state.items) { item in
             ItemView(item: item).onTapGesture { self.viewModel.handle(action: .selected(item)) }
         }
-        .onAppear {
-            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + .seconds(1)) {
-                DispatchQueue.main.async {
-                    self.viewModel.handle(action: .load)
-                }
-            }
-        }
+        .onAppear { delay(.seconds(1)) { self.viewModel.handle(action: .load) } }
     }
 
 }
