@@ -1,19 +1,23 @@
 import SwiftUI
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let navigator = Navigator()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let contentView = ContentView()
-
         if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
+            window = navigator.setup(window: UIWindow(windowScene: windowScene))
+            window?.makeKeyAndVisible()
+            navigator.handle(navigation: .push(.first()))
         }
     }
 
+}
+
+extension Screen {
+    static func first() -> Self {
+        .init() { UIHostingController(rootView: ItemListView().environmentObject(ItemListViewModel().any)) }
+    }
 }
