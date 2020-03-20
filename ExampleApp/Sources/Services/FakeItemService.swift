@@ -15,10 +15,10 @@ private extension FakeItemService {
     func generate() -> [Item] {
         [
             Item(id: "0", name: "First"),
-            Item(id: "0", name: "Second"),
-            Item(id: "0", name: "Third"),
-            Item(id: "0", name: "Fourth"),
-            Item(id: "0", name: "Fifth")
+            Item(id: "1", name: "Second"),
+            Item(id: "2", name: "Third"),
+            Item(id: "3", name: "Fourth"),
+            Item(id: "4", name: "Fifth")
         ]
     }
 

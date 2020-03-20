@@ -12,7 +12,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         injectMe {
             component { serviceComponent }
             component { useCaseComponent }
-            factory { self.navigator } // In this case we return the SceneDelegate Navigator so its a singleton
+            factory { self.navigator }
         }
 
         if let windowScene = scene as? UIWindowScene {
