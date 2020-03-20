@@ -1,6 +1,7 @@
 import ProjectDescription
 
 public extension TargetDependency {
+    static let injection: TargetDependency = .project(target: "Injection", path: .relativeToRoot("Injection"))
     static let nimble: TargetDependency = .framework(path: .carthage("Nimble"))
 }
 
