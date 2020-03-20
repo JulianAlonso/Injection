@@ -1,3 +1,5 @@
 import Foundation
 
-protocol ItemService {}
+protocol ItemService {
+    func fetch() -> [Item]
+}

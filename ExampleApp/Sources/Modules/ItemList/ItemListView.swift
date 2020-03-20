@@ -1,10 +1,13 @@
 import SwiftUI
 
-struct ItemListState {
+struct ItemListState: ViewState {
     var items: [Item]
+
+    static var initial: ItemListState { ItemListState(items: []) }
 }
 
 enum ItemListAction {
+    case load
     case selected(Item)
 }
 
@@ -15,8 +18,14 @@ struct ItemListView: View {
 
     var body: some View {
         List(viewModel.state.items) { item in
-            ItemView(item: item)
-                .onTapGesture { self.viewModel.handle(action: .selected(item)) }
+            ItemView(item: item).onTapGesture { self.viewModel.handle(action: .selected(item)) }
+        }
+        .onAppear {
+            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + .seconds(1)) {
+                DispatchQueue.main.async {
+                    self.viewModel.handle(action: .load)
+                }
+            }
         }
     }
 

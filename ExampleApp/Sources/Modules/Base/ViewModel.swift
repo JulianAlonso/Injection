@@ -1,8 +1,12 @@
 import Combine
 import SwiftUI
 
+protocol ViewState {
+    static var initial: Self { get }
+}
+
 protocol ViewModel: ObservableObject where ObjectWillChangePublisher.Output == Void {
-    associatedtype State
+    associatedtype State: ViewState
     associatedtype Action
 
     var state: State { get }

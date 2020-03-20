@@ -1,3 +1,4 @@
+import Injection
 import SwiftUI
 import UIKit
 
@@ -7,6 +8,12 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let navigator = Navigator()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
+        injectMe {
+            component { serviceComponent }
+            component { useCaseComponent }
+        }
+
         if let windowScene = scene as? UIWindowScene {
             window = navigator.setup(window: UIWindow(windowScene: windowScene))
             window?.makeKeyAndVisible()
@@ -14,10 +21,4 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 
-}
-
-extension Screen {
-    static func first() -> Self {
-        .init() { UIHostingController(rootView: ItemListView().environmentObject(ItemListViewModel().any)) }
-    }
 }

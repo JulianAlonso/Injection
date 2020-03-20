@@ -2,12 +2,19 @@ import Foundation
 
 final class ItemListViewModel: ViewModel {
 
-    @Published private(set) var state: ItemListState
+    @Published private(set) var state: ItemListState = .initial
 
-    init() {
-        self.state = ItemListState(items: [])
+    private let fetchItemsUseCase: FetchItemsUseCase
+
+    init(fetchItemsUseCase: FetchItemsUseCase) {
+        self.fetchItemsUseCase = fetchItemsUseCase
     }
 
-    func handle(action: ItemListAction) {}
+    func handle(action: ItemListAction) {
+        switch action {
+        case .load: state.items = fetchItemsUseCase.execute()
+        case .selected: break
+        }
+    }
 
 }
