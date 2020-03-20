@@ -1,5 +1,3 @@
 import Foundation
 
-final class FetchItemsUseCase: ItemService {
-    
-}
+final class FetchItemsUseCase: ItemService {}
