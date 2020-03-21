@@ -17,3 +17,7 @@ extension Item {
         Item(id: id, name: name, favorite: !isFavorite)
     }
 }
+
+extension Item: RawRepresentable {
+    var rawValue: String { id }
+}
