@@ -8,7 +8,7 @@ final class FetchItemsUseCaseTests: XCTestCase {
 
     func testFetchReturningServiceItems() {
         let mockService = TestItemService()
-        let module = Module(parent: appModule) {
+        let module = Module(parent: appModule()) {
             factory { mockService as ItemService }
         }
         let mockItems = [Item(id: "0", name: "mock")]

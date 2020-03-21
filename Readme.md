@@ -260,6 +260,42 @@ Remember, all factories are registred to a type/protocol, so, if you write two r
 
 Please try to have a pyramid dependency graph.
 
+### Overriding and Singleton Instances
+
+Factories are not created until they are provided to a module, so take this in mind.
+There is an important note to know when sharing singletons and parent modules.
+If you're trying to override a dependency of a singleton inside a module with a parent and the singleton it's inside the parent, this could
+not happen because that instance can be created before you override it.
+Let see an example to clarify this:
+
+```swift 
+
+let parent = Module {
+    factory { OneStorage() as Storage }
+    single { Service(storage: $0.resolve()) }
+}
+
+let child = Module(parent: parent) {
+    factory { OtherStorage() as Storage }
+}
+
+let service = parent.resolve() as Service
+let childService = child.resolve() as Service
+
+```
+
+The storage of childService will be the same as Service because it's a singleton already resolved on the parent.
+But if you change the call order then the singleton will be with the `OtherService` storage.
+This is a little bit hard to see but it's the normal behaviour.
+
+Take special care about this when testing because if you share a module between all the tests, this can raise.
+
+For this, like you will see on the application test, the module to share its a function that returns the module, so always I get a fresh copy 
+of the module and I can override without problems.
+
+**So, keep in mind, TRY TO AVOID OVERRIDE SINGLETON DEPENDENCIES, BECAUSE THE SINGLETON CAN BE ALREADY CREATED WHEN YOU THINK YOU'RE CREATING IT**
+
+
 ## Installation
 
 This is a pre alpha version, so maybe it will change, hope not to much, but the option it's here.

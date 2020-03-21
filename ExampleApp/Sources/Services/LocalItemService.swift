@@ -2,7 +2,7 @@ import Foundation
 
 final class LocalItemService: ItemService {
 
-    private let storage: Storage
+    let storage: Storage
 
     init(storage: Storage) {
         self.storage = storage

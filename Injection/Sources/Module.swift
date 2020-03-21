@@ -53,5 +53,5 @@ extension Module {
 }
 
 private extension Array where Element == Entry {
-    var factories: [Hash: AnyFactory] { reduce(into: [Hash: AnyFactory]()) { $0[$1.hash] = $1.factory } }
+    var factories: [Hash: AnyFactory] { reduce(into: [Hash: AnyFactory]()) { $0[$1.hash] = $1.factory() } }
 }

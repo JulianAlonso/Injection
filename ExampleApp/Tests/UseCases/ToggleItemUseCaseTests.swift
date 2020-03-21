@@ -8,7 +8,7 @@ final class ToggleItemUseCaseTests: XCTestCase {
 
     func testToggle() {
         let mockService = TestItemService()
-        let module = Module(parent: appModule) {
+        let module = Module(parent: appModule()) {
             factory { mockService as ItemService }
         }
 
