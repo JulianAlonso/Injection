@@ -6,6 +6,10 @@ extension UserDefaults: Storage {
     }
 
     func get<K, T>(key: K) -> T? where K: RawRepresentable, K.RawValue == String {
-        return value(forKey: key.rawValue) as? T
+        value(forKey: key.rawValue) as? T
+    }
+
+    func get<K, T>(key: K, default value: T) -> T where K: RawRepresentable, K.RawValue == String {
+        get(key: key) ?? value
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Item: Identifiable, Hashable {
+struct Item: Identifiable, Hashable, Equatable {
     let id: String
     let name: String
     let isFavorite: Bool
@@ -16,8 +16,4 @@ extension Item {
     var toggled: Item {
         Item(id: id, name: name, favorite: !isFavorite)
     }
-}
-
-extension Item: RawRepresentable {
-    var rawValue: String { id }
 }
