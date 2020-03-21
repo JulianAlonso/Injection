@@ -22,7 +22,7 @@ struct ItemListView: View {
             ItemCellView(item: item).onTapGesture { self.viewModel.handle(action: .selected(item)) }
         }
         .listStyle(GroupedListStyle())
-        .onAppear { delay(.seconds(1)) { self.viewModel.handle(action: .load) } }
+        .onAppear { async { self.viewModel.handle(action: .load) } }
     }
 
 }
