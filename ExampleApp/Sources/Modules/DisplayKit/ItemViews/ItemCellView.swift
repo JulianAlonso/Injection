@@ -5,9 +5,14 @@ struct ItemCellView: View {
 
     var body: some View {
         HStack {
+            item.favoriteImage
             Text(item.name).headline
             Spacer()
             Image("arrow")
         }
     }
+}
+
+extension Item {
+    var favoriteImage: Image { isFavorite ? Image("star") : Image("unstar") }
 }
