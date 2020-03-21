@@ -8,6 +8,14 @@ final class FakeItemService: ItemService {
     }
 
     func fetch() -> [Item] { items }
+
+    func toggle(item: Item) -> Item {
+        let toggled = item.toggled
+        if let index = items.firstIndex(of: item) {
+            items[index] = toggled
+        }
+        return toggled
+    }
 }
 
 private extension FakeItemService {

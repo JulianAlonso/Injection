@@ -22,6 +22,7 @@
 		6FA317328153EEA24C4ADF73 /* ItemDetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A9546A47E0CF4FBE3BEB7 /* ItemDetailModuleBuilder.swift */; };
 		7493A6FBA9744DA74DD9804B /* ItemListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2FA9ED2B5E514173DE351 /* ItemListModuleBuilder.swift */; };
 		8CD10677B325A034898BB21C /* AppModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271C10CCB0D151D3B6D3BE2 /* AppModuleBuilder.swift */; };
+		8D85E354242634B50096AF28 /* ToggleItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85E353242634B50096AF28 /* ToggleItemUseCase.swift */; };
 		98076013EF57C0BBA17F169B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7E69198B512340106AD87A /* Nimble.framework */; };
 		9FAA57B4E736B02BC14F634D /* empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724DE31B577272DFEF0FA9AE /* empty.swift */; };
 		A9AFD661F1823840D645A105 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B593AAF00FB60B4778EBEF /* TextStyle.swift */; };
@@ -83,6 +84,7 @@
 		7F41BD3D2BAC492DFB776023 /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = App.plist; sourceTree = "<group>"; };
 		89C18ABE10352E4C26B8D22B /* CoreComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreComponents.swift; sourceTree = "<group>"; };
 		8C7058D34208616A5D3DB6A7 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		8D85E353242634B50096AF28 /* ToggleItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleItemUseCase.swift; sourceTree = "<group>"; };
 		94AB62C597E5E8CFBCD37F26 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7E69198B512340106AD87A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		A0FA814E0C8A8B81CEA9B34E /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				2B21E63A92B9A42850EC9B41 /* FetchItemsUseCase.swift */,
 				3D992470F1439789E85626B8 /* ItemUseCase.swift */,
+				8D85E353242634B50096AF28 /* ToggleItemUseCase.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				AB1AA1A57E19BE9BDED7B780 /* Item.swift in Sources */,
 				1E79734C15D1FEAF32729CE2 /* ViewModel.swift in Sources */,
 				101F241DEA095CBBD692D95D /* ItemDetailView.swift in Sources */,
+				8D85E354242634B50096AF28 /* ToggleItemUseCase.swift in Sources */,
 				5F4E77F1C6150C88A81FE999 /* ItemListView.swift in Sources */,
 				1938448E628684504050C7FC /* ItemCellView.swift in Sources */,
 				A9AFD661F1823840D645A105 /* TextStyle.swift in Sources */,

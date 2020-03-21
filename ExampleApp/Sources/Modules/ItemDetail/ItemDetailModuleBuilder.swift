@@ -13,7 +13,7 @@ final class ItemDetailModuleBuilder: ModuleBuilder {
 
     override func component() -> Component? {
         Component {
-            factory { ItemDetailViewModel(item: self.item) }
+            factory { ItemDetailViewModel(item: self.item, toggleItemUseCase: $0.resolve()) }
         }
     }
 

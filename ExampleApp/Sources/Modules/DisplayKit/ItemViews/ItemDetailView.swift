@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct ItemDetailState: ViewState {
-    let item: Item
+    var item: Item
 
     static var initial: ItemDetailState { fatalError("Not supported inital on ItemDetailState") }
 }
@@ -20,7 +20,7 @@ struct ItemDetailView: View {
         VStack {
             Text(viewModel.state.item.name).primary
             Button(action: { self.viewModel.handle(action: .toggle(self.viewModel.state.item)) }) {
-                Text("Make favorite").action
+                Text(viewModel.state.item.isFavorite ? "Unvaforite" : "Favorite").action
             }
         }
     }
