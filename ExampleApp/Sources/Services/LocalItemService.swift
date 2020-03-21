@@ -1,6 +1,6 @@
 import Foundation
 
-final class FakeItemService: ItemService {
+final class LocalItemService: ItemService {
 
     private let storage: Storage
 
@@ -10,17 +10,14 @@ final class FakeItemService: ItemService {
 
     func fetch() -> [Item] { generate() }
 
-    func toggle(item: Item) -> Item {
-        save(item.toggled)
-    }
-
-    private func save(_ item: Item) -> Item {
+    func save(item: Item) -> Item {
         storage.set(key: item, value: item.isFavorite)
         return item
     }
+
 }
 
-private extension FakeItemService {
+private extension LocalItemService {
 
     func generate() -> [Item] {
         [
