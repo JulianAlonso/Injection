@@ -8,6 +8,10 @@ final class ItemDetailViewModel: ViewModel {
         self.state = ItemDetailState(item: item)
     }
 
-    func handle(action: Never) {}
+    func handle(action: ItemDetailAction) {
+        switch action {
+        case .toggle(let item): print("Toogle: \(item)")
+        }
+    }
 
 }

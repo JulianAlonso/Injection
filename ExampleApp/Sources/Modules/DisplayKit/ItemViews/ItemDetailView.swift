@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUI
 
 struct ItemDetailState: ViewState {
@@ -6,13 +7,22 @@ struct ItemDetailState: ViewState {
     static var initial: ItemDetailState { fatalError("Not supported inital on ItemDetailState") }
 }
 
+enum ItemDetailAction {
+    case toggle(Item)
+}
+
 struct ItemDetailView: View {
 
     @EnvironmentObject
-    var viewModel: AnyViewModel<ItemDetailState, Never>
+    var viewModel: AnyViewModel<ItemDetailState, ItemDetailAction>
 
     var body: some View {
-        Text(viewModel.state.item.name).primary
+        VStack {
+            Text(viewModel.state.item.name).primary
+            Button(action: { self.viewModel.handle(action: .toggle(self.viewModel.state.item)) }) {
+                Text("Make favorite").action
+            }
+        }
     }
 
 }
