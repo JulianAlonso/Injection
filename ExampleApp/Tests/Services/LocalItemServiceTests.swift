@@ -8,7 +8,7 @@ final class LocalItemServiceTests: XCTestCase {
 
     func testSave() {
         let mockStorage = TestStorage()
-        let module = Module(parent: appModule) {
+        let module = Module(parent: appModule()) {
             factory { mockStorage as Storage }
         }
 
@@ -16,12 +16,12 @@ final class LocalItemServiceTests: XCTestCase {
 
         _ = sut.save(item: Item(id: "0", name: "name"))
 
-        expect(mockStorage.dic.count).to(equal(1))
+        expect(mockStorage.dic.count).toEventually(equal(1))
     }
 
     func testFetch() {
         let mockStorage = TestStorage()
-        let module = Module(parent: appModule) {
+        let module = Module(parent: appModule()) {
             factory { mockStorage as Storage }
         }
 

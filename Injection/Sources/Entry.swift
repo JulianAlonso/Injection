@@ -2,9 +2,9 @@ import Foundation
 
 public struct Entry {
     let hash: Hash
-    let factory: AnyFactory
+    let factory: () -> AnyFactory
 
-    init<T>(type: T.Type, tag: String?, factory: AnyFactory) {
+    init<T>(type: T.Type, tag: String?, factory: @escaping @autoclosure () -> AnyFactory) {
         self.hash = Hash(type: type, tag: tag)
         self.factory = factory
     }
