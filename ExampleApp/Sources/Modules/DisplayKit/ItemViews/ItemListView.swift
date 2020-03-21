@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct ItemListState: ViewState {
     var items: [Item] = []
@@ -18,8 +19,9 @@ struct ItemListView: View {
 
     var body: some View {
         List(viewModel.state.items) { item in
-            ItemView(item: item).onTapGesture { self.viewModel.handle(action: .selected(item)) }
+            ItemCellView(item: item).onTapGesture { self.viewModel.handle(action: .selected(item)) }
         }
+        .listStyle(GroupedListStyle())
         .onAppear { delay(.seconds(1)) { self.viewModel.handle(action: .load) } }
     }
 
