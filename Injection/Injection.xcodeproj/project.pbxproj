@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1112390E6B51D137AD0266BE /* ResolverParentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */; };
 		19F4E330AD406A40612894FD /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1798557EE00BFE321EE24 /* ModuleBuilder.swift */; };
 		1F6CB6A7AD2FBEC34FB7BE28 /* ComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C83B5A607A7CC41FEB54BC /* ComponentTests.swift */; };
 		2502367C98ABD6238E2BA4DE /* Injection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4FDE61301AA44F4B46C5BF /* Injection.framework */; };
@@ -14,7 +15,6 @@
 		3D51CEA1F429C6CC2942B80C /* ModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */; };
 		48917DADAAC03C895A632077 /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C645CEA45199BBCAE8E8EB /* Registrations.swift */; };
 		678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B4C4B443C01EB653AF59 /* Module.swift */; };
-		8DA284712425136200FE92BB /* ResolverParentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2846F2425135E00FE92BB /* ResolverParentTests.swift */; };
 		9F36566AEE6C609C36572589 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0586E0BA11FB007C48903C /* Component.swift */; };
 		A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */; };
 		B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8BE59B01D576899EA2D03 /* Factories.swift */; };
@@ -24,8 +24,8 @@
 		D2DE76710FAB9D4FC83BDD00 /* Injection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4FDE61301AA44F4B46C5BF /* Injection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E94E9812FA432AE45AEE5461 /* InjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745DA0525EE5E16FAE9378CC /* InjectTests.swift */; };
 		E9C18C8B6CEBC773FCD6E420 /* ResolveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA9C4E2F726DD90F9B857BC /* ResolveTests.swift */; };
-		E9F101B69B05F6BBBAEAE5F2 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39796D4CDA3C8E53F89729 /* Inject.swift */; };
 		EB91554C15A78FDEE7CEE72E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14179FAA42BCFF82A2FFF98 /* Entry.swift */; };
+		F88E34808EB209752657ED2E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1732DCD8D6EA7C8C68AE0 /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +63,10 @@
 /* Begin PBXFileReference section */
 		0045B4C4B443C01EB653AF59 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		0258C71B7A498C50A7906BC9 /* Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Tests.plist; sourceTree = "<group>"; };
+		18A1732DCD8D6EA7C8C68AE0 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		40D7E8D58D407945EC576AC8 /* Injection.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Injection.plist; sourceTree = "<group>"; };
 		42E8BE59B01D576899EA2D03 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		47E0AFBA6FB78CC4C176A097 /* HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTests.swift; sourceTree = "<group>"; };
-		4C39796D4CDA3C8E53F89729 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		51C5A9A24BD9390C0142DA3A /* ModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		51E1798557EE00BFE321EE24 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		5C0586E0BA11FB007C48903C /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		6CA9C4E2F726DD90F9B857BC /* ResolveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolveTests.swift; sourceTree = "<group>"; };
 		745DA0525EE5E16FAE9378CC /* InjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectTests.swift; sourceTree = "<group>"; };
 		76C83B5A607A7CC41FEB54BC /* ComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTests.swift; sourceTree = "<group>"; };
+		8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverParentTests.swift; sourceTree = "<group>"; };
 		8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoriesTests.swift; sourceTree = "<group>"; };
-		8DA2846F2425135E00FE92BB /* ResolverParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverParentTests.swift; sourceTree = "<group>"; };
 		A14179FAA42BCFF82A2FFF98 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		ABB205C06640348F009EB315 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		BE4FDE61301AA44F4B46C5BF /* Injection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Injection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +120,7 @@
 				A14179FAA42BCFF82A2FFF98 /* Entry.swift */,
 				42E8BE59B01D576899EA2D03 /* Factories.swift */,
 				ABB205C06640348F009EB315 /* Hash.swift */,
-				4C39796D4CDA3C8E53F89729 /* Inject.swift */,
+				18A1732DCD8D6EA7C8C68AE0 /* Injection.swift */,
 				0045B4C4B443C01EB653AF59 /* Module.swift */,
 				51E1798557EE00BFE321EE24 /* ModuleBuilder.swift */,
 				63C645CEA45199BBCAE8E8EB /* Registrations.swift */,
@@ -149,8 +149,8 @@
 				745DA0525EE5E16FAE9378CC /* InjectTests.swift */,
 				F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */,
 				51C5A9A24BD9390C0142DA3A /* ModuleTests.swift */,
+				8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */,
 				6CA9C4E2F726DD90F9B857BC /* ResolveTests.swift */,
-				8DA2846F2425135E00FE92BB /* ResolverParentTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -270,6 +270,8 @@
 		1CAAA154DA601239AB67CF0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = E3A0472F66E7B5BE1659052D /* Build configuration list for PBXProject "Injection" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -386,11 +388,11 @@
 				1F6CB6A7AD2FBEC34FB7BE28 /* ComponentTests.swift in Sources */,
 				A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */,
 				D1293026BA5D8865178327B6 /* HashTests.swift in Sources */,
-				8DA284712425136200FE92BB /* ResolverParentTests.swift in Sources */,
 				E94E9812FA432AE45AEE5461 /* InjectTests.swift in Sources */,
 				3D51CEA1F429C6CC2942B80C /* ModuleBuilderTests.swift in Sources */,
 				BE8B6E0A603C527B2FD6709B /* ModuleTests.swift in Sources */,
 				E9C18C8B6CEBC773FCD6E420 /* ResolveTests.swift in Sources */,
+				1112390E6B51D137AD0266BE /* ResolverParentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +404,7 @@
 				EB91554C15A78FDEE7CEE72E /* Entry.swift in Sources */,
 				B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */,
 				3293A63C5BFF5635329AB678 /* Hash.swift in Sources */,
-				E9F101B69B05F6BBBAEAE5F2 /* Inject.swift in Sources */,
+				F88E34808EB209752657ED2E /* Injection.swift in Sources */,
 				678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */,
 				19F4E330AD406A40612894FD /* ModuleBuilder.swift in Sources */,
 				48917DADAAC03C895A632077 /* Registrations.swift in Sources */,

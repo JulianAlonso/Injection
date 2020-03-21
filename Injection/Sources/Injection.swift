@@ -1,14 +1,14 @@
 import Foundation
 
-func injectMe(@Module .ModuleBuilder _ builder: () -> [Entry]) {
+public func injectMe(@Module .ModuleBuilder _ builder: () -> [Entry]) {
     Injection.initialize(with: .init(builder: builder))
 }
 
-func injectMe(@Module .ModuleBuilder _ builder: () -> Registration) {
+public func injectMe(@Module .ModuleBuilder _ builder: () -> Registration) {
     Injection.initialize(with: .init(builder: builder))
 }
 
-func injectMe(_ module: Module) {
+public func injectMe(_ module: Module) {
     Injection.initialize(with: module)
 }
 
