@@ -310,7 +310,11 @@ github "JulianAlonso/Injection" "master"
 
 #### Cocoapods:
 
-Will be available soon :sweat_smile:
+Add this line to your Podfile
+
+```
+pod 'Injection', '~> 0.0'
+```
 
 ## Want to contribute?
 
