@@ -14,12 +14,21 @@ public final class Module {
     }
 
     public func resolve<T>(tag: String? = nil) -> T {
-        print("Resolving type -\(tag ?? "no tag"): \(T.self)")
-        return factories[Hash(type: T.self, tag: tag)]?.build(self) as? T ?? parent!.resolve(tag: tag, child: self)
+        Logger.log(message: "Solving type\(tag.log): \(T.self)")
+        return factories[Hash(type: T.self, tag: tag)]?.build(self) as? T
+            ?? parent?.resolve(tag: tag, child: self)
+            ?? fail(tag)
     }
 
     private func resolve<T>(tag: String?, child: Module) -> T {
-        factories[Hash(type: T.self, tag: tag)]?.build(child) as? T ?? parent!.resolve(tag: tag, child: child)
+        Logger.log(message: "Parent solving type\(tag.log): \(T.self)")
+        return factories[Hash(type: T.self, tag: tag)]?.build(child) as? T
+            ?? parent?.resolve(tag: tag, child: child)
+            ?? fail(tag)
+    }
+    
+    private func fail<T>(_ tag: String?) -> T {
+        fatalError("Factory not found for type\(tag.log): \(T.self)")
     }
 }
 
@@ -54,4 +63,10 @@ extension Module {
 
 private extension Array where Element == Entry {
     var factories: [Hash: AnyFactory] { reduce(into: [Hash: AnyFactory]()) { $0[$1.hash] = $1.factory() } }
+}
+
+private extension Optional where Wrapped == String {
+    var log: String {
+        self.map { " \($0)" } ?? ""
+    }
 }

@@ -15,6 +15,8 @@
 		3D51CEA1F429C6CC2942B80C /* ModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */; };
 		48917DADAAC03C895A632077 /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C645CEA45199BBCAE8E8EB /* Registrations.swift */; };
 		678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B4C4B443C01EB653AF59 /* Module.swift */; };
+		8D49B171242A9B4C00B074CF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D49B170242A9B4C00B074CF /* Logger.swift */; };
+		8D49B173242A9CDE00B074CF /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D49B172242A9CDE00B074CF /* LogLevel.swift */; };
 		9F36566AEE6C609C36572589 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0586E0BA11FB007C48903C /* Component.swift */; };
 		A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */; };
 		B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8BE59B01D576899EA2D03 /* Factories.swift */; };
@@ -77,6 +79,8 @@
 		76C83B5A607A7CC41FEB54BC /* ComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTests.swift; sourceTree = "<group>"; };
 		8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverParentTests.swift; sourceTree = "<group>"; };
 		8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoriesTests.swift; sourceTree = "<group>"; };
+		8D49B170242A9B4C00B074CF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8D49B172242A9CDE00B074CF /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		A14179FAA42BCFF82A2FFF98 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		ABB205C06640348F009EB315 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		BE4FDE61301AA44F4B46C5BF /* Injection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Injection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,7 @@
 		068D06265433215E89C8D0D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8D49B16F242A9B4200B074CF /* Logger */,
 				5C0586E0BA11FB007C48903C /* Component.swift */,
 				A14179FAA42BCFF82A2FFF98 /* Entry.swift */,
 				42E8BE59B01D576899EA2D03 /* Factories.swift */,
@@ -177,6 +182,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D49B16F242A9B4200B074CF /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				8D49B170242A9B4C00B074CF /* Logger.swift */,
+				8D49B172242A9CDE00B074CF /* LogLevel.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		C05BF49423DDE8C28004D726 /* InfoPlists */ = {
@@ -270,8 +284,6 @@
 		1CAAA154DA601239AB67CF0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = E3A0472F66E7B5BE1659052D /* Build configuration list for PBXProject "Injection" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -403,7 +415,9 @@
 				9F36566AEE6C609C36572589 /* Component.swift in Sources */,
 				EB91554C15A78FDEE7CEE72E /* Entry.swift in Sources */,
 				B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */,
+				8D49B173242A9CDE00B074CF /* LogLevel.swift in Sources */,
 				3293A63C5BFF5635329AB678 /* Hash.swift in Sources */,
+				8D49B171242A9B4C00B074CF /* Logger.swift in Sources */,
 				F88E34808EB209752657ED2E /* Injection.swift in Sources */,
 				678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */,
 				19F4E330AD406A40612894FD /* ModuleBuilder.swift in Sources */,
