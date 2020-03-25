@@ -2,6 +2,8 @@
 ![Injection Logo](injection_logo.png)
 
 [![Build Status](https://travis-ci.org/JulianAlonso/Injection.svg?branch=master)](https://travis-ci.org/JulianAlonso/Injection)
+[![Tuist Badge](https://img.shields.io/badge/powered%20by-Tuist-green.svg?longCache=true)](https://github.com/tuist)
+
 
 ## What's Injection
 
@@ -351,5 +353,3 @@ This option is not available yet ☹️. But I appreciate it.
 #### More info
 
 DSL functions inspired on [Koin](https://insert-koin.io/)
-
-[![Tuist Badge](https://img.shields.io/badge/powered%20by-Tuist-green.svg?longCache=true)](https://github.com/tuist)
