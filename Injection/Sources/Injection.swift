@@ -1,5 +1,9 @@
 import Foundation
 
+public func inject(logger level: Logger.Level) {
+    Logger.level = level
+}
+
 public func injectMe(@Module.ModuleBuilder _ builder: () -> [Entry]) {
     Injection.initialize(with: .init(builder: builder))
 }

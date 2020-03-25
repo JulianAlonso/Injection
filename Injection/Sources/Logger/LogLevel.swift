@@ -1,6 +1,6 @@
 import Foundation
 
-extension Logger {
+public extension Logger {
     enum Level {
         case debug
         case error

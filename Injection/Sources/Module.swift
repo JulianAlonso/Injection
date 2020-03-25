@@ -26,8 +26,9 @@ public final class Module {
             ?? parent?.resolve(tag: tag, child: child)
             ?? fail(tag)
     }
-    
+
     private func fail<T>(_ tag: String?) -> T {
+        Logger.log(level: .error, message: "Factory not found for type\(tag.log): \(T.self)")
         fatalError("Factory not found for type\(tag.log): \(T.self)")
     }
 }
@@ -67,6 +68,6 @@ private extension Array where Element == Entry {
 
 private extension Optional where Wrapped == String {
     var log: String {
-        self.map { " \($0)" } ?? ""
+        map { " \($0)" } ?? ""
     }
 }
