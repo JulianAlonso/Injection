@@ -296,6 +296,16 @@ of the module and I can override without problems.
 **So, keep in mind, TRY TO AVOID OVERRIDE SINGLETON DEPENDENCIES, BECAUSE THE SINGLETON CAN BE ALREADY CREATED WHEN YOU THINK YOU'RE CREATING IT**
 
 
+### Logger
+
+There is a Logger that will print all the operations while reoslving a type.
+There are 3 log lines:
+`Solving type....` `(.debug)` logged when a `module.resolve()` its called
+`Parent solving type...` `(.debug)` logged when a `module.resolve()` it's getting that dependency from the parent.
+`Factory not found...` `(.error)` logged when a factory is not found. This will crash.
+
+By default when is DEBUG the logger level will be `.debug` else will be `.error`. You can change is default value calling `inject(logger: Level)`
+
 ## Installation
 
 This is a pre alpha version, so maybe it will change, hope not to much, but the option it's here.
