@@ -15,7 +15,12 @@
 		3D51CEA1F429C6CC2942B80C /* ModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */; };
 		48917DADAAC03C895A632077 /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C645CEA45199BBCAE8E8EB /* Registrations.swift */; };
 		678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B4C4B443C01EB653AF59 /* Module.swift */; };
+<<<<<<< HEAD
 		93E103D383C3CBDED1495792 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C9D4AE9D712C0118A53CCA /* Logger.swift */; };
+=======
+		8D86BD53242BD83100D4DAA8 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D86BD52242BD83100D4DAA8 /* Inject.swift */; };
+		8D86BD55242BDACA00D4DAA8 /* InjectPropertyWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D86BD54242BDACA00D4DAA8 /* InjectPropertyWrapperTests.swift */; };
+>>>>>>> inject - Inject property wrapper created and tested
 		9F36566AEE6C609C36572589 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0586E0BA11FB007C48903C /* Component.swift */; };
 		A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */; };
 		B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8BE59B01D576899EA2D03 /* Factories.swift */; };
@@ -80,6 +85,8 @@
 		76C83B5A607A7CC41FEB54BC /* ComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTests.swift; sourceTree = "<group>"; };
 		8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverParentTests.swift; sourceTree = "<group>"; };
 		8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoriesTests.swift; sourceTree = "<group>"; };
+		8D86BD52242BD83100D4DAA8 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		8D86BD54242BDACA00D4DAA8 /* InjectPropertyWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapperTests.swift; sourceTree = "<group>"; };
 		A14179FAA42BCFF82A2FFF98 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		ABB205C06640348F009EB315 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		BE4FDE61301AA44F4B46C5BF /* Injection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Injection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +136,7 @@
 				0045B4C4B443C01EB653AF59 /* Module.swift */,
 				51E1798557EE00BFE321EE24 /* ModuleBuilder.swift */,
 				63C645CEA45199BBCAE8E8EB /* Registrations.swift */,
+				8D86BD52242BD83100D4DAA8 /* Inject.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				51C5A9A24BD9390C0142DA3A /* ModuleTests.swift */,
 				8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */,
 				6CA9C4E2F726DD90F9B857BC /* ResolveTests.swift */,
+				8D86BD54242BDACA00D4DAA8 /* InjectPropertyWrapperTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -284,8 +293,6 @@
 		1CAAA154DA601239AB67CF0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = E3A0472F66E7B5BE1659052D /* Build configuration list for PBXProject "Injection" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -400,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6CB6A7AD2FBEC34FB7BE28 /* ComponentTests.swift in Sources */,
+				8D86BD55242BDACA00D4DAA8 /* InjectPropertyWrapperTests.swift in Sources */,
 				A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */,
 				D1293026BA5D8865178327B6 /* HashTests.swift in Sources */,
 				E94E9812FA432AE45AEE5461 /* InjectTests.swift in Sources */,
@@ -416,6 +424,7 @@
 			files = (
 				9F36566AEE6C609C36572589 /* Component.swift in Sources */,
 				EB91554C15A78FDEE7CEE72E /* Entry.swift in Sources */,
+				8D86BD53242BD83100D4DAA8 /* Inject.swift in Sources */,
 				B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */,
 				3293A63C5BFF5635329AB678 /* Hash.swift in Sources */,
 				F88E34808EB209752657ED2E /* Injection.swift in Sources */,
