@@ -340,6 +340,9 @@ final class MagicModuleBuilder: ModuleBuilder<UIViewController> {
 }
 ```
 
+**Note** Your custom builded classes inside `build()` method on Module builder won't be filled since them are not resolved by the module. 
+So if you want to have resolved properties inside those instances with the module provided, use dependency injection by constructor or set them 
+manually afther the creation.
 
 ### Logger
 
