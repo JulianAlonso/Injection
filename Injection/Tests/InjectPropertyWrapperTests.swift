@@ -26,6 +26,18 @@ final class InjectPropertyWrapperTests: XCTestCase {
         expect(ca.b.name).to(equal("Inject"))
     }
 
+    func testInjectedWithInheritance() {
+        let module = Module {
+            factory { A() }
+            factory { CB() }
+            factory { B(name: "Inject") }
+        }
+        let cb: CB = module.resolve()
+
+        expect(cb.b.name).to(equal("Inject"))
+        expect(cb.a.b.name).to(equal("Inject"))
+    }
+
 }
 
 private struct A {
@@ -38,4 +50,8 @@ private struct B {
 
 private class CA {
     @Inject var b: B
+}
+
+private class CB: CA {
+    @Inject var a: A
 }

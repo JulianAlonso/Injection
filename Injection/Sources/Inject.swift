@@ -22,7 +22,7 @@ public final class Inject<T>: InjectedProperty {
     public init() {}
 
     func inject(by module: Module) {
-        _value = module.resolve()
+        wrappedValue = module.resolve()
     }
 }
 
