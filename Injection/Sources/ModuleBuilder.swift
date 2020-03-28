@@ -3,7 +3,9 @@ import Foundation
 open class ModuleBuilder<T> {
     public lazy var module: Module = { Injection.module.expand(with: component()) }()
 
-    public init() {}
+    public init() {
+        fill(self, by: module)
+    }
 
     open func component() -> Component? { nil }
 

@@ -26,6 +26,7 @@ public final class Inject<T>: InjectedProperty {
     }
 }
 
+@discardableResult
 func fill<T>(_ object: T, by module: Module) -> T {
     let mirror = Mirror(reflecting: object)
 
