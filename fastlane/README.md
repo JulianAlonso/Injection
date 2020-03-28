@@ -25,11 +25,11 @@ Download carthage dependencies and generate the XCWorkspace project
 fastlane test
 ```
 Run the Unit Tests
-### ci_increment_build_number
+### ci_bump_build_number
 ```
-fastlane ci_increment_build_number
+fastlane ci_bump_build_number
 ```
-Increment build number
+Increments build number
 ### bump_version
 ```
 fastlane bump_version

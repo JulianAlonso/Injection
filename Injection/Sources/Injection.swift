@@ -1,10 +1,14 @@
 import Foundation
 
-public func injectMe(@Module .ModuleBuilder _ builder: () -> [Entry]) {
+public func inject(logger level: Logger.Level) {
+    Logger.level = level
+}
+
+public func injectMe(@Module.ModuleBuilder _ builder: () -> [Entry]) {
     Injection.initialize(with: .init(builder: builder))
 }
 
-public func injectMe(@Module .ModuleBuilder _ builder: () -> Registration) {
+public func injectMe(@Module.ModuleBuilder _ builder: () -> Registration) {
     Injection.initialize(with: .init(builder: builder))
 }
 
