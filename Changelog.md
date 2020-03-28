@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.2] - 
 ### Added
+- @Inject support
 - New Logger to print whats happening while resolving dependencies.
 - Added a changelog 💣
 

@@ -297,6 +297,49 @@ of the module and I can override without problems.
 
 **So, keep in mind, TRY TO AVOID OVERRIDE SINGLETON DEPENDENCIES, BECAUSE THE SINGLETON CAN BE ALREADY CREATED WHEN YOU THINK YOU'RE CREATING IT**
 
+### @Inject
+
+You can use `@Inject` property wrapper to auto fill variables with resolved instances on your code.
+This will fill those variables with the factories provided by the module where you're resolving the instances.
+
+```swift 
+
+class Bar {}
+
+class Foo {
+    @Inject var bar: Bar
+}
+
+let module = Module {
+    factory { Foo() }
+    factory { Bar() }
+}
+
+// This will have the bar dependency filled.
+let foo = module.resolve() as Foo
+
+```
+
+And you can use this feature also on your ModuleBuilders if you want. These instances will be resolved with the module extendended in your ModuleBuilder.
+
+```swift
+final class MagicModuleBuilder: ModuleBuilder<UIViewController> {
+
+    @Inject var some: Some
+
+    func component() -> Component? {
+        Component {
+            factory { Some() }
+        }
+    } 
+
+    override func build() -> UIViewController {
+        MagicViewController(some: some)
+    }
+
+}
+```
+
 
 ### Logger
 
