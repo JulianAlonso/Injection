@@ -17,10 +17,11 @@ public final class Module {
         Logger.log(message: "Solving type\(tag.log): \(T.self)")
         return fill(
             factories[Hash(type: T.self, tag: tag)]?.build(self) as? T
-            ?? parent!.resolve(tag: tag, child: self),
-             by: self)
+                ?? parent!.resolve(tag: tag, child: self),
+            by: self
+        )
     }
-    
+
     private func resolve<T>(tag: String?, child: Module) -> T {
         Logger.log(message: "Parent solving type\(tag.log): \(T.self)")
         return factories[Hash(type: T.self, tag: tag)]?.build(child) as? T

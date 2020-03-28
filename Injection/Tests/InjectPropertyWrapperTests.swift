@@ -44,7 +44,7 @@ final class InjectPropertyWrapperTests: XCTestCase {
             factory { Built(b: $0.resolve()) }
         }
         Injection.initialize(with: module)
-        
+
         let b = TestModuleBuilder().build()
 
         expect(b.name).to(equal("Inject"))

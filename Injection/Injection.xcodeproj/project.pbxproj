@@ -290,8 +290,6 @@
 		1CAAA154DA601239AB67CF0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = E3A0472F66E7B5BE1659052D /* Build configuration list for PBXProject "Injection" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -360,7 +358,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/../scripts/swiftformat.sh ";
+			shellScript = "${PROJECT_DIR}/../scripts/swiftformat.sh \n";
 		};
 		6CAC9E5A4C3B91EC70632042 /* Embed Precompiled Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
