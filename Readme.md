@@ -344,6 +344,8 @@ final class MagicModuleBuilder: ModuleBuilder<UIViewController> {
 So if you want to have resolved properties inside those instances with the module provided, use dependency injection by constructor or set them 
 manually afther the creation.
 
+You can reference tagged dependencies with `@Inject` using `@Inject(tag: "yourtag")`
+
 ### Logger
 
 There is a Logger that will print all the operations while reoslving a type.
