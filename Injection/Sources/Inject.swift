@@ -1,28 +1,30 @@
 import Foundation
 
 protocol InjectedProperty {
-    static var injectType: Any.Type { get }
-
     func inject(by module: Module)
 }
 
 @propertyWrapper
 public final class Inject<T>: InjectedProperty {
-    static var injectType: Any.Type {
-        return T.self
-    }
-
-    var _value: T?
 
     public private(set) var wrappedValue: T {
         get { _value! }
         set { _value = newValue }
     }
 
-    public init() {}
+    var _value: T?
+    private let tag: String?
+
+    public init() {
+        self.tag = nil
+    }
+
+    public init(tag: String?) {
+        self.tag = tag
+    }
 
     func inject(by module: Module) {
-        wrappedValue = module.resolve()
+        wrappedValue = module.resolve(tag: tag)
     }
 }
 

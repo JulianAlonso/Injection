@@ -51,6 +51,18 @@ final class InjectPropertyWrapperTests: XCTestCase {
         Injection.reset()
     }
 
+    func testInjectWithTag() {
+        let module = Module {
+            factory { ATag() }
+            factory { B(name: "Inject") }
+            factory(tag: "tag") { B(name: "tagged") }
+        }
+
+        let a = module.resolve() as ATag
+
+        expect(a.b.name).to(equal("tagged"))
+    }
+
 }
 
 private struct A {
@@ -71,6 +83,10 @@ private class CB: CA {
 
 private struct Built {
     let b: B
+}
+
+private struct ATag {
+    @Inject(tag: "tag") var b: B
 }
 
 private final class TestModuleBuilder: ModuleBuilder<B> {
