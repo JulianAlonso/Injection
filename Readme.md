@@ -220,14 +220,14 @@ This provide to us the ability of override real components with parent dependenc
 
 ### More tips.
 
-How can I create a singleton?:
+- How can I create a singleton?:
 ```swift
 let component = Component {
     single { YourSingleton() }
 }
 ```
 
-The module only can be created with components?:
+- The module only can be created with components?:
 No, you can create a module with factories, singletons and components, eg:
 ```swift 
 let module = Module {
@@ -237,7 +237,7 @@ let module = Module {
 }
 ```
 
-Do you need two factories with the same type/protocol?
+- Do you need two factories with the same type/protocol?
 Use tags:
 ```swift
 let module = Module {
@@ -249,7 +249,7 @@ let module = Module {
 module.resolve(tag: "hisMagicService")
 ```
 
-Do you need create a new Module within other Module?
+- Do you need create a new Module within other Module?
 Yes, you can. You can create a new Module with a parent module simply doing:
 
 ```swift
@@ -261,6 +261,16 @@ let module = Module(parent: yourParentModule) {
 Remember, all factories are registred to a type/protocol, so, if you write two registrations for the same type, the last will override the first, so take this in mind. 
 
 Please try to have a pyramid dependency graph.
+
+- Do you need to resolve some dependency provided by `injectMe` out from a ModuleBuilder?
+You can do it using:
+
+```swift 
+let thing: Magic = resolve()
+```
+
+**Remember** This will only use the instances provided on `injectMe`
+
 
 ### Overriding and Singleton Instances
 
