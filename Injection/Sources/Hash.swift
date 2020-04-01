@@ -21,3 +21,11 @@ private extension String {
         return "\(replacingOccurrences(of: "Optional<", with: "").dropLast())"
     }
 }
+
+extension Hash: CustomStringConvertible {
+    var description: String { "Hash for \(type) with tag: \(tag ?? "empty")" }
+}
+
+extension Hash: CustomDebugStringConvertible {
+    var debugDescription: String { description }
+}
