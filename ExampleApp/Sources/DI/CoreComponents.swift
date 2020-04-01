@@ -6,10 +6,10 @@ let storageComponent = Component {
 }
 
 let serviceComponent = Component {
-    single { LocalItemService(storage: $0.resolve()) as ItemService }
+    single { LocalItemService(storage: $0()) as ItemService }
 }
 
 let useCaseComponent = Component {
-    factory { FetchItemsUseCase(service: $0.resolve()) }
-    factory { ToggleItemUseCase(service: $0.resolve()) }
+    factory { FetchItemsUseCase(service: $0()) }
+    factory { ToggleItemUseCase(service: $0()) }
 }
