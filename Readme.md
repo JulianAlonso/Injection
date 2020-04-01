@@ -31,7 +31,7 @@ let storageComponent = Component {
 
 //lets create other Component for use cases
 let useCasesComponent = Component {
-    factory { UseCaseWithStorage(storage: $0.resolve()) }
+    factory { UseCaseWithStorage(storage: $0()) }
 }
 
 //lets create a Module to get our dependencies
@@ -194,7 +194,7 @@ final class ScreenModuleBuilder: ModuleBuilder<UIViewController> {
 
     override func component() -> Component? {
         Component {
-            factory { YourAwesomeObject(parameter: self.parameter, dependency: $0.resolve()) }
+            factory { YourAwesomeObject(parameter: self.parameter, dependency: $0()) }
         }
     }
 
@@ -284,7 +284,7 @@ Let see an example to clarify this:
 
 let parent = Module {
     factory { OneStorage() as Storage }
-    single { Service(storage: $0.resolve()) }
+    single { Service(storage: $0()) }
 }
 
 let child = Module(parent: parent) {
