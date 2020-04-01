@@ -13,6 +13,8 @@ public final class Module {
         self.factories = factories
     }
 
+    public func callAsFunction<T>(tag: String? = nil) -> T { resolve(tag: tag) }
+
     public func resolve<T>(tag: String? = nil) -> T {
         Logger.log(message: "Solving type\(tag.log): \(T.self)")
         return factories[Hash(type: T.self, tag: tag)]?.build(self) as? T
