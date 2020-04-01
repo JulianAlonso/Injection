@@ -43,6 +43,17 @@ final class ResolveTests: XCTestCase {
         expect { _ = module.resolve() as C }.toNot(throwAssertion())
     }
 
+    func testSharedResolveFunction() {
+        let module = Module {
+            factory { A() }
+        }
+        injectMe(module)
+
+        expect { _ = resolve() as A }.toNot(throwAssertion())
+
+        Injection.reset()
+    }
+
 }
 
 private struct A {}
