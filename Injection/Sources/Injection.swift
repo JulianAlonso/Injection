@@ -16,6 +16,10 @@ public func injectMe(_ module: Module) {
     Injection.initialize(with: module)
 }
 
+public func resolve<T>(tag: String? = nil) -> T {
+    Injection.module.resolve(tag: tag)
+}
+
 final class Injection {
     private static let shared: Injection = .init()
     static var module: Module { shared.module }
