@@ -20,9 +20,10 @@ public class Logger {
 }
 
 extension Logger {
+    // swiftlint:disable implicit_getter
     static var level: Level {
-        get { shared.level }
         set { shared.level = newValue }
+        get { shared.level }
     }
 
     static func log(level: Level = .debug, message: String) {
