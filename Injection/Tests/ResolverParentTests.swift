@@ -7,7 +7,7 @@ final class ResolverParentTests: XCTestCase {
 
     func testParentResolveParentDependencyWithChildInstance() {
         let parent = Module {
-            factory { B(a: $0.resolve()) }
+            factory { B(a: $0()) }
         }
         let child = Module(parent: parent) {
             factory { A(module: "Child") }
@@ -19,7 +19,7 @@ final class ResolverParentTests: XCTestCase {
     func testChildModuleHavePreferenceOverParents() {
         let grandParent = Module {
             factory { A(module: "GrandParent") }
-            factory { B(a: $0.resolve()) }
+            factory { B(a: $0()) }
         }
         let parent = Module(parent: grandParent) {
             factory { A(module: "Parent") }

@@ -26,7 +26,7 @@ final class ResolveTests: XCTestCase {
             factory { A() }
         }
         let child = Module(parent: parent) {
-            factory { C(a: $0.resolve()) }
+            factory { C(a: $0()) }
         }
 
         expect { _ = child.resolve() as C }.toNot(throwAssertion())
@@ -34,7 +34,7 @@ final class ResolveTests: XCTestCase {
 
     func testResolveExpanded() {
         let component = Component {
-            factory { C(a: $0.resolve()) }
+            factory { C(a: $0()) }
         }
         let module = Module {
             factory { A() }
