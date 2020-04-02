@@ -13,9 +13,9 @@ Pod::Spec.new do |spec|
   spec.social_media_url   = "https://twitter.com/maisterjuli"
 
   spec.platform     = :ios, "11.0"
-  spec.source       = { :git => "https://github.com/JulianAlonso/Injection.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/JulianAlonso/Injection.git", :tag => "v#{spec.version}" }
   spec.swift_version = "5.1"
-  spec.source_files  = "Injection/Sources"
+  spec.source_files  = "Injection/Sources/**/*"
   spec.requires_arc = true
 
 end
