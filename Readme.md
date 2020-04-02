@@ -5,7 +5,6 @@
 [![Build Status](https://travis-ci.org/JulianAlonso/Injection.svg?branch=master)](https://travis-ci.org/JulianAlonso/Injection)
 [![Tuist Badge](https://img.shields.io/badge/powered%20by-Tuist-green.svg?longCache=true)](https://github.com/tuist)
 
-
 ## What's Injection
 
 Injection it's a simple Dependency Injection Library that allow you to define components, modules and resolves the dependencies for you.
@@ -340,6 +339,14 @@ Add this line to your Podfile
 
 ```
 pod 'Injection', '~> 0.0'
+```
+
+Update your README with the following line if you want to add the badge to your repo.
+
+[![Powered by Injection](https://img.shields.io/badge/powered%20by-INJECTION-blue.svg?longCache=true&style=flat)](https://github.com/JulianAlonso/Injection)
+
+```
+[![Powered by Injection](https://img.shields.io/badge/powered%20by-INJECTION-blue.svg?longCache=true&style=flat)](https://github.com/JulianAlonso/Injection)
 ```
 
 ## Want to contribute?
