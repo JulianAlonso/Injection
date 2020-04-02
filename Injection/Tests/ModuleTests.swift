@@ -61,3 +61,6 @@ final class ModuleTests: XCTestCase {
 
 private struct A {}
 private struct B {}
+private struct C {
+    let a: A
+}

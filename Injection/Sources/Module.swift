@@ -13,22 +13,25 @@ public final class Module {
         self.factories = factories
     }
 
+    public func callAsFunction<T>(tag: String? = nil) -> T { resolve(tag: tag) }
+
     public func resolve<T>(tag: String? = nil) -> T {
-        Logger.log(message: "Solving type\(tag.log): \(T.self)")
-        return factories[Hash(type: T.self, tag: tag)]?.build(self) as? T
-            ?? parent!.resolve(tag: tag, child: self)
+        let hash = Hash(type: T.self, tag: tag)
+        Logger.log(message: "Solving type \(hash): \(T.self)")
+        return factories[hash]?.build(self) as? T
+            ?? parent!.resolve(hash, child: self)
     }
 
-    private func resolve<T>(tag: String?, child: Module) -> T {
-        Logger.log(message: "Parent solving type\(tag.log): \(T.self)")
-        return factories[Hash(type: T.self, tag: tag)]?.build(child) as? T
-            ?? parent?.resolve(tag: tag, child: child)
-            ?? fail(tag)
+    private func resolve<T>(_ hash: Hash, child: Module) -> T {
+        Logger.log(message: "Parent solving \(hash): \(T.self)")
+        return factories[hash]?.build(child) as? T
+            ?? parent?.resolve(hash, child: child)
+            ?? fail(hash)
     }
 
-    private func fail<T>(_ tag: String?) -> T {
-        Logger.log(level: .error, message: "Factory not found for type\(tag.log): \(T.self)")
-        fatalError("Factory not found for type\(tag.log): \(T.self)")
+    private func fail<T>(_ hash: Hash) -> T {
+        Logger.log(level: .error, message: "Factory not found: \(hash): \(T.self)")
+        fatalError("Factory not found: \(hash): \(T.self)")
     }
 }
 
@@ -63,10 +66,4 @@ extension Module {
 
 private extension Array where Element == Entry {
     var factories: [Hash: AnyFactory] { reduce(into: [Hash: AnyFactory]()) { $0[$1.hash] = $1.factory() } }
-}
-
-private extension Optional where Wrapped == String {
-    var log: String {
-        map { " \($0)" } ?? ""
-    }
 }
