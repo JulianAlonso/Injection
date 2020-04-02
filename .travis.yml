@@ -14,6 +14,7 @@ addons:
       - carthage
 before_install:
 - bash <(curl -Ls https://install.tuist.io)
+- echo -e "machine github.com\n  login $GITHUB_ACCESS_TOKEN" > ~/.netrc
 branches:
   only:
   - master
