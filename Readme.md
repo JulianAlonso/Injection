@@ -1,6 +1,7 @@
 
 ![Injection Logo](injection_logo.png)
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/JulianAlonso/Injection.svg?branch=master)](https://travis-ci.org/JulianAlonso/Injection)
 [![Tuist Badge](https://img.shields.io/badge/powered%20by-Tuist-green.svg?longCache=true)](https://github.com/tuist)
 
