@@ -1,5 +1,6 @@
 import Foundation
 
+/// Used to register a factory inside a Module
 public struct Entry {
     let hash: Hash
     let factory: () -> AnyFactory
