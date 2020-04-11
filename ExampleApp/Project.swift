@@ -16,7 +16,7 @@ let project = Project(name: "InjectionExampleApp",
                           Target(name: "Tests",
                                  platform: .iOS,
                                  product: .unitTests,
-                                 bundleId: "com.devengo.InjectionApp-Tests",
+                                 bundleId: "com.julian.InjectionApp-Tests",
                                  infoPlist: .default,
                                  sources: ["Tests/**"],
                                  dependencies: [.target(name: "App"), .nimble])
