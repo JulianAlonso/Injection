@@ -1,5 +1,6 @@
 import Foundation
 
+/// Container with the provided dependencies
 public final class Module {
     let parent: Module?
     let factories: [Hash: AnyFactory]
@@ -15,6 +16,7 @@ public final class Module {
 
     public func callAsFunction<T>(tag: String? = nil) -> T { resolve(tag: tag) }
 
+    /// Return an instance created with the previously provided factory attached to that Type and Tag
     public func resolve<T>(tag: String? = nil) -> T {
         let hash = Hash(type: T.self, tag: tag)
         Logger.log(message: "Solving type \(hash): \(T.self)")
@@ -22,6 +24,7 @@ public final class Module {
             ?? parent!.resolve(hash, child: self)
     }
 
+    /// Resolves the dependency using the child to resolve factory dependencies
     private func resolve<T>(_ hash: Hash, child: Module) -> T {
         Logger.log(message: "Parent solving \(hash): \(T.self)")
         return factories[hash]?.build(child) as? T
@@ -58,6 +61,9 @@ public extension Module {
 }
 
 extension Module {
+    /// Creates a new module with the given component
+    /// The create module will have previous factories among the new ones. If a conflict
+    /// it's found current factories will be overriden by the component
     func expand(with component: Component?) -> Module {
         guard let _component = component else { return self }
         return Module(parent: nil, factories: factories.merging(_component.entries().factories, uniquingKeysWith: { _, b in b }))
