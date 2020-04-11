@@ -1,7 +1,10 @@
 #Mac trash
 .DS_Store
 
-## Travis things
+# SPM
+.build/
+
+# Travis things
 .bundle/
 vendor/
 
