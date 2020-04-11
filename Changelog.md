@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] -
+
+### Added
+- Added SPM support
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+
 ## [0.0.2] - 
 ### Added
 - Added callAsFunction to Module to use it like `factory { Some(dependency: $0() ) }`
