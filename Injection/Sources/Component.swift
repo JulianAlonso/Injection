@@ -1,5 +1,15 @@
 import Foundation
 
+/// Group a bunch of factories.
+/// This Compoentn could be used to provide factories to another `Component` or to create a `Module`
+///
+/// **Example**
+///
+/// let yourComponent = Component {
+///     factory { Service() }
+///     single { OneSingleton() }
+/// }
+///
 public struct Component {
     let _entries: [Entry]
 }
