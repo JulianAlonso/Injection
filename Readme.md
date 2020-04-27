@@ -374,3 +374,7 @@ This option is not available yet ☹️. But I appreciate it.
 #### More info
 
 DSL functions inspired on [Koin](https://insert-koin.io/)
+
+## Author
+
+Developed by: Julian Alonso, find me on Twitter - [@maisterjuli](https://twitter.com/MaisterJuli)
