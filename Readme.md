@@ -308,6 +308,22 @@ of the module and I can override without problems.
 **So, keep in mind, TRY TO AVOID OVERRIDE SINGLETON DEPENDENCIES, BECAUSE THE SINGLETON CAN BE ALREADY CREATED WHEN YOU THINK YOU'RE CREATING IT**
 
 
+### Property Wrappers
+
+You can use property wrappers to resolve instances provided previously to the shared module by `injectMe`.
+
+`@Inject` will be instanciated on initialization
+`@LazyInect` will be instanced by demand
+
+```swift
+@Inject service: Service
+@LazyInject service: Service
+
+//With tags
+@Inject(tag: "tag") service: Service
+@LazyInject(tag: "tag") service: Service
+```
+
 ### Logger
 
 There is a Logger that will print all the operations while reoslving a type.
