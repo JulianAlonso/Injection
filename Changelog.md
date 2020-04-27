@@ -6,10 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added `@Inject` & `@LazyInject` by [@JulianAlonso](https://github.com/julianalonso)
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [0.0.3] -
 
 ### Added
-- Added SPM support
+- Added SPM support by [@JulianAlonso](https://github.com/julianalonso)
 
 ### Changed
 
@@ -24,10 +37,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.2] - 
 ### Added
-- Added callAsFunction to Module to use it like `factory { Some(dependency: $0() ) }`
-- New `resolve()` shared function to resolve dependencies with the shared module instances.
-- New Logger to print whats happening while resolving dependencies.
-- Added a changelog 💣
+- Added callAsFunction to Module to use it like `factory { Some(dependency: $0() ) }` by [@JulianAlonso](https://github.com/julianalonso)
+- New `resolve()` shared function to resolve dependencies with the shared module instances. by [@JulianAlonso](https://github.com/julianalonso)
+- New Logger to print whats happening while resolving dependencies. by [@JulianAlonso](https://github.com/julianalonso)
+- Added a changelog 💣 by [@JulianAlonso](https://github.com/julianalonso)
 
 ### Changed
 
