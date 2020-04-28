@@ -41,8 +41,8 @@ final class Injection {
     private func notInitialized() -> Module {
         fatalError("Injection not initialized. Must call initInjection before")
     }
-    
-    //only test purpose.
+
+    // only test purpose.
     static func reset() {
         shared._module = nil
     }
