@@ -18,7 +18,7 @@ All the project it's based in one rule. **Write less**
 - [x] Weak scope, share the same instance while it's alive, if not, generates a new one.
 - [x] Use tags to tag your dependencies if you need to do it.
 - [x] Resolves optional types.
-- [ ] Circular dependency.
+- [x] Circular dependency.
 - [ ] Check module dependencies won't crash on runtime.
 - [ ] More things to be added...
 
@@ -243,6 +243,14 @@ let module = Module {
     single { YourSingleton() }
 }
 ```
+
+- How can I wire delegates?:
+
+Usually, delegation pattern it's the main cause of circular dependencies, and these dependencies are on the ViewController or root thing inside your application. You should use `ModuleBuilder`. This way you will have absolute control about how you are wiring them.
+
+This wiring process is manual, but this way you will get ride of how them are wired.
+
+If your application use a modern approach of `ViewModels` with reactive `Views`, maybe the delegation pattern to comunicate between the view and the view model could be deleted. You may find a basic example of how this works [here](http://diariodeprogramacion.com/2020/04/19/ios-at-scale-step4-single-data-flow.html).
 
 - Do you need two factories with the same type/protocol?
 
