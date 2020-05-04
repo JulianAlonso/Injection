@@ -29,3 +29,20 @@ final class SingletonFactory: AnyFactory {
         return built!
     }
 }
+
+final class WeakFactory: AnyFactory {
+
+    private(set) weak var built: AnyObject?
+    let _build: (_ module: Module) -> AnyObject
+
+    init<T>(_ factory: @escaping Factory<T>) where T: AnyObject {
+        self._build = { factory($0) }
+    }
+
+    func build(_ module: Module) -> Any {
+        let built = self.built ?? _build(module)
+        self.built = built
+        return built
+    }
+
+}
