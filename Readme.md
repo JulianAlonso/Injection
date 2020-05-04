@@ -15,7 +15,7 @@ All the project it's based in one rule. **Write less**
 - [x] Allow you define dependencies grouped on `Components`.
 - [x] Unique scope, creates a new instance each time you call `resolve` method.
 - [x] Singleton scope, shares the same instance along the whole `Module`.
-- [ ] Shared scope, to share the same instance along a dependency graph.
+- [x] Weak scope, share the same instance while it's alive, if not, generates a new one.
 - [x] Use tags to tag your dependencies if you need to do it.
 - [x] Resolves optional types.
 - [ ] Circular dependency.
@@ -222,13 +222,20 @@ This provide to us the ability of override real components with parent dependenc
 
 - How can I create a singleton?:
 ```swift
-let component = Component {
-    single { YourSingleton() }
-}
+single { YourSingleton() }
 ```
 
+- How can I create a weak singleton?:
+```swift
+weak { YourClass() }
+```
+
+Note: _This will create a new instance if there's no instance retained on memory. If the last instance created is still alive, then will return that instance. Only for Reference Types_
+
 - The module only can be created with components?:
+
 No, you can create a module with factories, singletons and components, eg:
+
 ```swift 
 let module = Module {
     component { yourComponent }
@@ -238,7 +245,9 @@ let module = Module {
 ```
 
 - Do you need two factories with the same type/protocol?
+
 Use tags:
+
 ```swift
 let module = Module {
     factory { YourMagicService() as MagicService }

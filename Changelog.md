@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Added `@Inject` & `@LazyInject` by [@JulianAlonso](https://github.com/julianalonso)
+- Added `weak` registration and `WeakFactory` by [@JulianAlonso](https://github.com/julianalonso)
 
 ### Changed
 
