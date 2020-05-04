@@ -406,6 +406,12 @@ By default when is DEBUG the logger level will be `.debug` else will be `.error`
 
 This is a pre alpha version, so maybe it will change, hope not to much, but the option it's here.
 
+#### Swift Package Manager:
+
+```swift
+.Package(url: "https://github.com/JulianAlonso/Injection", majorVersion: 0, minor: 0)
+```
+
 #### Carthage:
 
 Add this line to your Cartfile
