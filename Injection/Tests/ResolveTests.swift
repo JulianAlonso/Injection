@@ -18,7 +18,21 @@ final class ResolveTests: XCTestCase {
             single { B() }
         }
 
-        expect(module.resolve() as B).to(beIdenticalTo(module.resolve() as B))
+        let bone: B = module.resolve()
+        let btwo: B = module.resolve()
+
+        expect(bone).to(beIdenticalTo(btwo))
+    }
+
+    func testResolveWeak() {
+        let module = Module {
+            weak { B() }
+        }
+
+        let bone: B = module.resolve()
+        let btwo: B = module.resolve()
+
+        expect(bone).to(beIdenticalTo(btwo))
     }
 
     func testResolveWithParent() {

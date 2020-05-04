@@ -25,6 +25,34 @@ final class FactoriesTests: XCTestCase {
         expect(factory.build(self.module)).to(beIdenticalTo(factory.build(module)))
     }
 
+    func testWeakFactorySameInstance() {
+        let factory = WeakFactory { _ in B() }
+
+        let bone = factory.build(module)
+        let btwo = factory.build(module)
+
+        expect(bone).to(beIdenticalTo(btwo))
+    }
+
+    func testWeakFactoryDeletesInstance() {
+        let factory = WeakFactory { _ in B() }
+        var oneAddress: String?
+        var twoAddress: String?
+
+        var bone: B? = factory.build(module) as? B
+        withUnsafePointer(to: &bone) {
+            oneAddress = "\($0)"
+        }
+        bone = nil
+
+        var btwo: B? = factory.build(module) as? B
+        withUnsafePointer(to: &btwo) {
+            twoAddress = "\($0)"
+        }
+
+        expect(oneAddress).toNot(equal(twoAddress))
+    }
+
 }
 
 private struct A {}
