@@ -1,5 +1,12 @@
 .PHONY : clean kill_xcode project
 
+WORKSPACE=Injection.xcworkspace
+
+setup:
+	bash <(curl -Ls https://install.tuist.io)
+	tuist generate
+	xed $(WORKSPACE)
+
 test:
 	swift test
 
@@ -14,4 +21,4 @@ kill_xcode:
 
 project: kill_xcode clean
 	tuist generate
-	xed Injection.xcworkspace
+	xed $(WORKSPACE)
