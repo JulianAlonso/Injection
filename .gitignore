@@ -31,5 +31,9 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
+ExampleApp/*.xcodeproj
+ExampleApp/*.xcworkspace
+ExampleApp/**Derived/
+
 # own private notes
 .Notes.md

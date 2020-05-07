@@ -1,8 +1,5 @@
 .PHONY : clean kill_xcode project
 
-test:
-	swift test
-
 clean: 
 	rm -rf **/*.xcworkspace
 	rm -rf **/*.xcodeproj
@@ -14,4 +11,4 @@ kill_xcode:
 
 project: kill_xcode clean
 	tuist generate
-	xed Injection.xcworkspace
+	xed InjectionExampleApp.xcworkspace
