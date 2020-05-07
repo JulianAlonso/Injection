@@ -1,11 +1,10 @@
-.PHONY : clean kill_xcode project
+.PHONY : bootstrap test clean kill_xcode project
 
 WORKSPACE=Injection.xcworkspace
 
 bootstrap:
-	bash <(curl -Ls https://install.tuist.io)
-	tuist generate
-	xed $(WORKSPACE)
+	curl -Ls https://install.tuist.io
+	tuist focus
 
 test:
 	swift test
@@ -20,5 +19,4 @@ kill_xcode:
 	killall Simulator || true
 
 project: kill_xcode clean
-	tuist generate
-	xed $(WORKSPACE)
+	tuist focus

@@ -10,5 +10,4 @@ kill_xcode:
 	killall Simulator || true
 
 project: kill_xcode clean
-	tuist generate
-	xed InjectionExampleApp.xcworkspace
+	tuist focus
