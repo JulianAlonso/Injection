@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,19 +14,19 @@
 		3293A63C5BFF5635329AB678 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB205C06640348F009EB315 /* Hash.swift */; };
 		3D51CEA1F429C6CC2942B80C /* ModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */; };
 		48917DADAAC03C895A632077 /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C645CEA45199BBCAE8E8EB /* Registrations.swift */; };
+		623730A2AF43B09F409C694E /* InjectAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC5A0D4A6B495927D233E9 /* InjectAnnotationTests.swift */; };
 		678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B4C4B443C01EB653AF59 /* Module.swift */; };
-		8DDE60FD2457327700654EF3 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDE60FC2457327700654EF3 /* Inject.swift */; };
-		8DDE60FF2457391E00654EF3 /* InjectAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDE60FE2457391E00654EF3 /* InjectAnnotationTests.swift */; };
 		93E103D383C3CBDED1495792 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C9D4AE9D712C0118A53CCA /* Logger.swift */; };
 		9F36566AEE6C609C36572589 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0586E0BA11FB007C48903C /* Component.swift */; };
 		A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */; };
 		B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8BE59B01D576899EA2D03 /* Factories.swift */; };
 		BE8B6E0A603C527B2FD6709B /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5A9A24BD9390C0142DA3A /* ModuleTests.swift */; };
-		C7F28B37BA67C2282138537C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3241E785FBBACEC6E76EDE /* Nimble.framework */; };
 		D1293026BA5D8865178327B6 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0AFBA6FB78CC4C176A097 /* HashTests.swift */; };
 		D2DE76710FAB9D4FC83BDD00 /* Injection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4FDE61301AA44F4B46C5BF /* Injection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCE274D22BEC19DBC6A13F39 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 955E82A48BA668B956E3D3C9 /* Nimble */; };
 		E94E9812FA432AE45AEE5461 /* InjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745DA0525EE5E16FAE9378CC /* InjectTests.swift */; };
 		E9C18C8B6CEBC773FCD6E420 /* ResolveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA9C4E2F726DD90F9B857BC /* ResolveTests.swift */; };
+		E9F101B69B05F6BBBAEAE5F2 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39796D4CDA3C8E53F89729 /* Inject.swift */; };
 		EB91554C15A78FDEE7CEE72E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14179FAA42BCFF82A2FFF98 /* Entry.swift */; };
 		F88E34808EB209752657ED2E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1732DCD8D6EA7C8C68AE0 /* Injection.swift */; };
 		FEC4D83F4E69CDA953236C92 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BEE81B4CC9D222D963EA7 /* LogLevel.swift */; };
@@ -71,6 +71,7 @@
 		40D7E8D58D407945EC576AC8 /* Injection.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Injection.plist; sourceTree = "<group>"; };
 		42E8BE59B01D576899EA2D03 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		47E0AFBA6FB78CC4C176A097 /* HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTests.swift; sourceTree = "<group>"; };
+		4C39796D4CDA3C8E53F89729 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		51C5A9A24BD9390C0142DA3A /* ModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		51E1798557EE00BFE321EE24 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		5C0586E0BA11FB007C48903C /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -82,13 +83,11 @@
 		76C83B5A607A7CC41FEB54BC /* ComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTests.swift; sourceTree = "<group>"; };
 		8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverParentTests.swift; sourceTree = "<group>"; };
 		8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoriesTests.swift; sourceTree = "<group>"; };
-		8DDE60FC2457327700654EF3 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
-		8DDE60FE2457391E00654EF3 /* InjectAnnotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectAnnotationTests.swift; sourceTree = "<group>"; };
 		A14179FAA42BCFF82A2FFF98 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		ABB205C06640348F009EB315 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		BE4FDE61301AA44F4B46C5BF /* Injection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Injection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CC5A0D4A6B495927D233E9 /* InjectAnnotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectAnnotationTests.swift; sourceTree = "<group>"; };
 		CF5BEE81B4CC9D222D963EA7 /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
-		EC3241E785FBBACEC6E76EDE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2502367C98ABD6238E2BA4DE /* Injection.framework in Frameworks */,
-				C7F28B37BA67C2282138537C /* Nimble.framework in Frameworks */,
+				DCE274D22BEC19DBC6A13F39 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,11 +128,11 @@
 				A14179FAA42BCFF82A2FFF98 /* Entry.swift */,
 				42E8BE59B01D576899EA2D03 /* Factories.swift */,
 				ABB205C06640348F009EB315 /* Hash.swift */,
+				4C39796D4CDA3C8E53F89729 /* Inject.swift */,
 				18A1732DCD8D6EA7C8C68AE0 /* Injection.swift */,
 				0045B4C4B443C01EB653AF59 /* Module.swift */,
 				51E1798557EE00BFE321EE24 /* ModuleBuilder.swift */,
 				63C645CEA45199BBCAE8E8EB /* Registrations.swift */,
-				8DDE60FC2457327700654EF3 /* Inject.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -141,7 +140,6 @@
 		18755F1B9DE77B0A169D8F9C /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				E8ED9A9CF05C2E4D6A221CA7 /* Carthage */,
 				5B8168302A6889B650BE84EE /* Config */,
 				D2EDE16FA4F9F7786DFD7889 /* Derived */,
 				068D06265433215E89C8D0D2 /* Sources */,
@@ -165,12 +163,12 @@
 				76C83B5A607A7CC41FEB54BC /* ComponentTests.swift */,
 				8A3C12DF0B54E3EA83DE87CA /* FactoriesTests.swift */,
 				47E0AFBA6FB78CC4C176A097 /* HashTests.swift */,
+				C2CC5A0D4A6B495927D233E9 /* InjectAnnotationTests.swift */,
 				745DA0525EE5E16FAE9378CC /* InjectTests.swift */,
 				F29E127FA46B38905B03A959 /* ModuleBuilderTests.swift */,
 				51C5A9A24BD9390C0142DA3A /* ModuleTests.swift */,
 				8104A7E9144B5931B872EA71 /* ResolverParentTests.swift */,
 				6CA9C4E2F726DD90F9B857BC /* ResolveTests.swift */,
-				8DDE60FE2457391E00654EF3 /* InjectAnnotationTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -215,31 +213,6 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
-		E0F013C69EEE0F1CC47A12FD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EC3241E785FBBACEC6E76EDE /* Nimble.framework */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		E8ED9A9CF05C2E4D6A221CA7 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				FFFB76856756C620D5A8585B /* Build */,
-			);
-			name = Carthage;
-			path = ../Carthage;
-			sourceTree = "<group>";
-		};
-		FFFB76856756C620D5A8585B /* Build */ = {
-			isa = PBXGroup;
-			children = (
-				E0F013C69EEE0F1CC47A12FD /* iOS */,
-			);
-			path = Build;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,6 +253,9 @@
 				78A262668C3BF29F9F095B1B /* PBXTargetDependency */,
 			);
 			name = Tests;
+			packageProductDependencies = (
+				955E82A48BA668B956E3D3C9 /* Nimble */,
+			);
 			productName = Tests;
 			productReference = 64A65E8045B0509B9FBAE986 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -290,6 +266,8 @@
 		1CAAA154DA601239AB67CF0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = E3A0472F66E7B5BE1659052D /* Build configuration list for PBXProject "Injection" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -300,6 +278,9 @@
 				en,
 			);
 			mainGroup = 03C80B6DC9D45EAE5CFA7DD4;
+			packageReferences = (
+				5905D03E5F3B4030D7855D77 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 736836FA1BD376B017BCB402 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,15 +347,13 @@
 			files = (
 			);
 			inputPaths = (
-				../Carthage/Build/iOS/Nimble.framework,
 			);
 			name = "Embed Precompiled Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\nset -e\nset -u\nset -o pipefail\n\nfunction on_error {\n  echo \"$(realpath -mq \"${0}\"):$1: error: Unexpected failure\"\n}\ntrap 'on_error $LINENO' ERR\n\nif [ -z ${FRAMEWORKS_FOLDER_PATH+x} ]; then\n  # If FRAMEWORKS_FOLDER_PATH is not set, then there's nowhere for us to copy\n  # frameworks to, so exit 0 (signalling the script phase was successful).\n  exit 0\nfi\n\necho \"mkdir -p ${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nSWIFT_STDLIB_PATH=\"${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"\n# Used as a return value for each invocation of `strip_invalid_archs` function.\nSTRIP_BINARY_RETVAL=0\n# This protects against multiple targets copying the same framework dependency at the same time. The solution\n# was originally proposed here: https://lists.samba.org/archive/rsync/2008-February/020158.html\nRSYNC_PROTECT_TMP_FILES=(--filter \"P .*.??????\")\n# Copies and strips a vendored framework\ninstall_framework()\n{\n  if [ -r \"${BUILT_PRODUCTS_DIR}/$1\" ]; then\n    local source=\"${BUILT_PRODUCTS_DIR}/$1\"\n  elif [ -r \"${BUILT_PRODUCTS_DIR}/$(basename \"$1\")\" ]; then\n    local source=\"${BUILT_PRODUCTS_DIR}/$(basename \"$1\")\"\n  elif [ -r \"$1\" ]; then\n    local source=\"$1\"\n  fi\n  local destination=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n  if [ -L \"${source}\" ]; then\n    echo \"Symlinked...\"\n    source=\"$(readlink \"${source}\")\"\n  fi\n  # Use filter instead of exclude so missing patterns don't throw errors.\n  echo \"rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \\\"- CVS/\\\" --filter \\\"- .svn/\\\" --filter \\\"- .git/\\\" --filter \\\"- .hg/\\\" --filter \\\"- Headers\\\" --filter \\\"- PrivateHeaders\\\" --filter \\\"- Modules\\\" \\\"${source}\\\" \\\"${destination}\\\"\"\n  rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${source}\" \"${destination}\"\n  local basename\n  basename=\"$(basename -s .framework \"$1\")\"\n  binary=\"${destination}/${basename}.framework/${basename}\"\n  if ! [ -r \"$binary\" ]; then\n    binary=\"${destination}/${basename}\"\n  elif [ -L \"${binary}\" ]; then\n    echo \"Destination binary is symlinked...\"\n    dirname=\"$(dirname \"${binary}\")\"\n    binary=\"${dirname}/$(readlink \"${binary}\")\"\n  fi\n  # Strip invalid architectures so \"fat\" simulator / device frameworks work on device\n  if [[ \"$(file \"$binary\")\" == *\"dynamically linked shared library\"* ]]; then\n    strip_invalid_archs \"$binary\"\n  fi\n  # Resign the code if required by the build settings to avoid unstable apps\n  code_sign_if_enabled \"${destination}/$(basename \"$1\")\"\n}\n\n\n# Copies and strips a vendored dSYM\ninstall_dsym() {\n  local source=\"$1\"\n  if [ -r \"$source\" ]; then\n    \n    # Copy the dSYM into a the targets temp dir.\n    echo \"rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \\\"- CVS/\\\" --filter \\\"- .svn/\\\" --filter \\\"- .git/\\\" --filter \\\"- .hg/\\\" --filter \\\"- Headers\\\" --filter \\\"- PrivateHeaders\\\" --filter \\\"- Modules\\\" \\\"${source}\\\" \\\"${DERIVED_FILES_DIR}\\\"\"\n    rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${source}\" \"${DERIVED_FILES_DIR}\"\n    \n    local basename\n    basename=\"$(basename -s .framework.dSYM \"$source\")\"\n    binary=\"${DERIVED_FILES_DIR}/${basename}.framework.dSYM/Contents/Resources/DWARF/${basename}\"\n    \n    # Strip invalid architectures so \"fat\" simulator / device frameworks work on device\n    if [[ \"$(file \"$binary\")\" == *\"Mach-O \"*\"dSYM companion\"* ]]; then\n      strip_invalid_archs \"$binary\"\n    fi\n    if [[ $STRIP_BINARY_RETVAL == 1 ]]; then\n      # Move the stripped file into its final destination.\n      echo \"rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \\\"- CVS/\\\" --filter \\\"- .svn/\\\" --filter \\\"- .git/\\\" --filter \\\"- .hg/\\\" --filter \\\"- Headers\\\" --filter \\\"- PrivateHeaders\\\" --filter \\\"- Modules\\\" \\\"${DERIVED_FILES_DIR}/${basename}.framework.dSYM\\\" \\\"${DWARF_DSYM_FOLDER_PATH}\\\"\"\n      rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${DERIVED_FILES_DIR}/${basename}.framework.dSYM\" \"${DWARF_DSYM_FOLDER_PATH}\"\n    else\n      # The dSYM was not stripped at all, in this case touch a fake folder so the input/output paths from Xcode do not reexecute this script because the file is missing.\n      touch \"${DWARF_DSYM_FOLDER_PATH}/${basename}.framework.dSYM\"\n    fi\n\n  fi\n}\n\n\n# Copies the bcsymbolmap files of a vendored framework\ninstall_bcsymbolmap() {\n    local bcsymbolmap_path=\"$1\"\n    local destination=\"${BUILT_PRODUCTS_DIR}\"\n    echo \"rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${bcsymbolmap_path}\" \"${destination}\"\"\n    rsync --delete -av \"${RSYNC_PROTECT_TMP_FILES[@]}\" --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${bcsymbolmap_path}\" \"${destination}\"\n}\n\n\n# Signs a framework with the provided identity\ncode_sign_if_enabled() {\n  if [ -n \"${EXPANDED_CODE_SIGN_IDENTITY:-}\" -a \"${CODE_SIGNING_REQUIRED:-}\" != \"NO\" -a \"${CODE_SIGNING_ALLOWED}\" != \"NO\" ]; then\n    # Use the current code_sign_identity\n    echo \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\n    local code_sign_cmd=\"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS:-} --preserve-metadata=identifier,entitlements '$1'\"\n    code_sign_cmd=\"$code_sign_cmd &\"\n    echo \"$code_sign_cmd\"\n    eval \"$code_sign_cmd\"\n  fi\n}\n\n\n# Strip invalid architectures\nstrip_invalid_archs() {\n  binary=\"$1\"\n  # Get architectures for current target binary\n  binary_archs=\"$(lipo -info \"$binary\" | rev | cut -d ':' -f1 | awk '{$1=$1;print}' | rev)\"\n  # Intersect them with the architectures we are building for\n  intersected_archs=\"$(echo ${ARCHS[@]} ${binary_archs[@]} | tr ' ' '\\n' | sort | uniq -d)\"\n  # If there are no archs supported by this binary then warn the user\n  if [[ -z \"$intersected_archs\" ]]; then\n    echo \"warning: [CP] Vendored binary '$binary' contains architectures ($binary_archs) none of which match the current build architectures ($ARCHS).\"\n    STRIP_BINARY_RETVAL=0\n    return\n  fi\n  stripped=\"\"\n  for arch in $binary_archs; do\n    if ! [[ \"${ARCHS}\" == *\"$arch\"* ]]; then\n      # Strip non-valid architectures in-place\n      lipo -remove \"$arch\" -output \"$binary\" \"$binary\"\n      stripped=\"$stripped $arch\"\n    fi\n  done\n  if [[ \"$stripped\" ]]; then\n    echo \"Stripped $binary of architectures:$stripped\"\n  fi\n  STRIP_BINARY_RETVAL=1\n}\ninstall_framework \"../Carthage/Build/iOS/Nimble.framework\"\ninstall_dsym \"../Carthage/Build/iOS/Nimble.framework.dSYM\"\n";
+			shellScript = "echo \"Skipping, nothing to be embedded.\"";
 		};
 		A459D806BD3928A183CFEF23 /* Swift lint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -404,12 +383,12 @@
 				1F6CB6A7AD2FBEC34FB7BE28 /* ComponentTests.swift in Sources */,
 				A3EB30291C9918E9599151DD /* FactoriesTests.swift in Sources */,
 				D1293026BA5D8865178327B6 /* HashTests.swift in Sources */,
+				623730A2AF43B09F409C694E /* InjectAnnotationTests.swift in Sources */,
 				E94E9812FA432AE45AEE5461 /* InjectTests.swift in Sources */,
 				3D51CEA1F429C6CC2942B80C /* ModuleBuilderTests.swift in Sources */,
 				BE8B6E0A603C527B2FD6709B /* ModuleTests.swift in Sources */,
 				E9C18C8B6CEBC773FCD6E420 /* ResolveTests.swift in Sources */,
 				1112390E6B51D137AD0266BE /* ResolverParentTests.swift in Sources */,
-				8DDE60FF2457391E00654EF3 /* InjectAnnotationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,9 +400,9 @@
 				EB91554C15A78FDEE7CEE72E /* Entry.swift in Sources */,
 				B424FC738CBE6BAAEED4D53B /* Factories.swift in Sources */,
 				3293A63C5BFF5635329AB678 /* Hash.swift in Sources */,
+				E9F101B69B05F6BBBAEAE5F2 /* Inject.swift in Sources */,
 				F88E34808EB209752657ED2E /* Injection.swift in Sources */,
 				FEC4D83F4E69CDA953236C92 /* LogLevel.swift in Sources */,
-				8DDE60FD2457327700654EF3 /* Inject.swift in Sources */,
 				93E103D383C3CBDED1495792 /* Logger.swift in Sources */,
 				678FC8AFB8F69F7C61D3FAA2 /* Module.swift in Sources */,
 				19F4E330AD406A40612894FD /* ModuleBuilder.swift in Sources */,
@@ -447,10 +426,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Derived/InfoPlists/Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,10 +505,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Config/Injection.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -562,10 +537,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Config/Injection.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -593,10 +568,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Derived/InfoPlists/Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,6 +667,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5905D03E5F3B4030D7855D77 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		955E82A48BA668B956E3D3C9 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CAAA154DA601239AB67CF0B /* Project object */;
 }

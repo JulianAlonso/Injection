@@ -4,6 +4,7 @@ import ProjectDescriptionHelpers
 private let name = "Injection"
 
 let project = Project(name: name,
+                      packages: [.nimble],
                       targets: [
                           Target(name: name,
                                  platform: .iOS,

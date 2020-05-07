@@ -15,12 +15,6 @@ Cartfile.resolved
 # Xcode things
 **xcuserdata
 
-#Tuist derived things
-Derived/
-
-#Old testing version
-old/
-
 # fastlane
 fastlane/report.xml
 fastlane/Preview.html
@@ -30,6 +24,10 @@ fastlane/Preview.html
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+ExampleApp/*.xcodeproj
+ExampleApp/*.xcworkspace
+ExampleApp/**Derived/
 
 # own private notes
 .Notes.md
