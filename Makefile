@@ -2,7 +2,7 @@
 
 WORKSPACE=Injection.xcworkspace
 
-setup:
+bootstrap:
 	bash <(curl -Ls https://install.tuist.io)
 	tuist generate
 	xed $(WORKSPACE)

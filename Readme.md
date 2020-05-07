@@ -438,25 +438,19 @@ Update your README with the following line if you want to add the badge to your 
 
 ## Want to contribute?
 
-Make sure that have installed [Carthage](https://github.com/Carthage/Carthage) and [Tuist](https://tuist.io/) on your local machine.
+All PR's are welcome.
 
-Clone the project.
-
-Run on the root project folder `fastlane setup_project`, I should use [Bundler](https://bundler.io/) so I run `bundler exec fastlane setup_project`, if you use _Bundler_ also, run before all `bundle install`
-
-Create your own branch with reference to the issue your solving eg: `XXX_little_description` XXX == issue number, write code and tests, and make a PR, all work will be wellcome.
+For the project, on your local machine run `make bootstrap` and start coding!
 
 :rocket:
 
 ### Test the code
 
-Tests are under `Injection/Test` folder. 
-You can check all'em are passing by running `fastlane test`.
+Tests are under `Injection/Test` folder. You can check all of them are passing by running `make test`.
 
 ## Want to payme a coffe? :coffee:
 
 This option is not available yet ☹️. But I appreciate it.
-
 
 #### More info
 
