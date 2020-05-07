@@ -15,12 +15,6 @@ Cartfile.resolved
 # Xcode things
 **xcuserdata
 
-#Tuist derived things
-Derived/
-
-#Old testing version
-old/
-
 # fastlane
 fastlane/report.xml
 fastlane/Preview.html
