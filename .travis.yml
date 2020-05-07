@@ -22,4 +22,4 @@ jobs:
   include:
     - stage: "✅ Test suite"
       name: Test suite
-      script: bundle exec fastlane test
+      script: make test
