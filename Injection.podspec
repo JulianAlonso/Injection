@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Injection"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "Injection, a Swift Lightweight dependency manager library."
   spec.description  = <<-DESC
   Swift Lightweight dependency manager library based on modules and components.
